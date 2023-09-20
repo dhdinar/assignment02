@@ -1,0 +1,21 @@
+<?php
+function printFibonacciSeries($count) {
+
+    echo "The first $count Fibonacci numbers:\n";
+
+    $first = 0;
+    $second = 1;
+
+    echo $first;
+
+    for ($i = 1; $i < $count; $i++) {
+        echo ", $second";
+
+        $next = $first + $second;
+        $first = $second;
+        $second = $next;
+    }
+}
+
+printFibonacciSeries(15);
+?>
